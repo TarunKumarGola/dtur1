@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "406310424188",
+    "firebase_url": "https://dtures-197ba.firebaseio.com",
+    "project_id": "dtures-197ba",
+    "storage_bucket": "dtures-197ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406310424188:android:3c06559c2d60c8b6",
+        "android_client_info": {
+          "package_name": "com.example.sachin.dtures"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406310424188-qoftudhrcmkk2ag94jn2v2oejtoku472.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sachin.dtures",
+            "certificate_hash": "5f157e635b94752e0c969ac9d1907ea0fe6bf87f"
+          }
+        },
+        {
+          "client_id": "406310424188-3elrsn1kc528uda1fhj5df9aq1p3pjiv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2dxva_KctIiyPtAznvSX3sa-LOGrhkuk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406310424188-3elrsn1kc528uda1fhj5df9aq1p3pjiv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

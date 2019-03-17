@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".first_year_items">
+    <item
+        android:id="@+id/groupa"
+        android:visible="true"
+        android:title="Group A"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/groupb"
+        android:visible="true"
+        android:title="Group B"
+        app:showAsAction="never"/>
+
+</menu>
