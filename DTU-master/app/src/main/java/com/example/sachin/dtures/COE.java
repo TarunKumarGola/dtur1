@@ -26,7 +26,21 @@ import xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScrol
 public class COE extends AppCompatActivity {
 
     String type;
-     @Override
+
+    String[] SubjectsList={"Analog Electronics","Data Structure","Object Oriented Programming","Engineering Analysis and Design","SEM 4",
+            "Digital Electronics","Digital Electronics","DBMS","Operating System Design","Comp. Org. & Arch","Algo Design ana Analysis","SEM 5","Software Engineering"
+            ,"Theory of Computation","Compiler Design","SEM 6","Artificial Intelligence","Information and Network Security","Distributed System","SEM 7","Data warehouse and mining"
+    };
+
+
+
+
+    int [] picList={R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,
+            R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,
+            R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,R.drawable.computerblack,
+            R.drawable.computerblack,R.drawable.computerblack
+    };
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coe);
@@ -92,119 +106,10 @@ public class COE extends AppCompatActivity {
          abcd2List.add(new abcd2("SEM 7",  R.drawable.white));
          abcd2List.add(new abcd2("Data warehouse and mining",  R.drawable.computerblack));
 
-         mAdapter=new com.example.sachin.dtures.ListAdapter(this,abcd2List);
+         mAdapter=new com.example.sachin.dtures.ListAdapter(this,abcd2List,type);
          recyclerView.setAdapter(mAdapter);
 
-       /* final ArrayList<abcd> abcd2List= new ArrayList<>();
-        abcd2List.add(new abcd("Analog Electronics", R.drawable.computerblack));
-        abcd2List.add(new abcd("Data Structure",  R.drawable.computerblack));
-        abcd2List.add(new abcd("Object Oriented Programming",  R.drawable.computerblack));
-        abcd2List.add(new abcd("Engineering Analysis and Design",  R.drawable.computerblack));
-        abcd2List.add(new abcd("Discrete Structures",  R.drawable.computerblack));
 
-        ListView list = findViewById(R.id.lvf);
-        wordextender item = new wordextender(this, abcd2List;
-        list.setAdapter(item);
-        ListUtils.setDynamicHeight(list);
-
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                abcd word = abcd2Listget(position);
-                //Jo Karna Hai aage;
-            }
-        });
-
-        final ArrayList<abcd> abcd2List = new ArrayList<>();
-        abcd2List.add(new abcd("Digital Electronics",  R.drawable.computerblack));
-        abcd2List.add(new abcd("DBMS",  R.drawable.computerblack));
-        abcd2List.add(new abcd("Operating System Design",  R.drawable.computerblack));
-        abcd2List.add(new abcd("Comp. Org. & Arch",  R.drawable.computerblack));
-        abcd2List.add(new abcd("Algo Design ana Analysis",  R.drawable.computerblack));
-
-        ListView list2 = findViewById(R.id.lvf2);
-        wordextender item2 = new wordextender(this, abcd2List);
-        list2.setAdapter(item2);
-        ListUtils.setDynamicHeight(list2);
-        list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                abcd word = abcd2List.get(position);
-                //Jo Karna Hai aage;
-            }
-        });
-
-        final ArrayList<abcd> abcd2List = new ArrayList<>();
-        abcd2List.add(new abcd("Software Engineering",  R.drawable.computerblack));
-        abcd2List.add(new abcd("Theory of Computation",  R.drawable.computerblack));
-
-        ListView list3 = findViewById(R.id.lvf3);
-        wordextender item3 = new wordextender(this, abcd2List);
-        list3.setAdapter(item3);
-        ListUtils.setDynamicHeight(list3);
-        list3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                abcd word = abcd2List.get(position);
-                //Jo Karna Hai aage;
-            }
-        });
-
-        final ArrayList<abcd> abcd2List = new ArrayList<>();
-        abcd2List.add(new abcd("Compiler Design",  R.drawable.computerblack));
-
-        abcd2List.add(new abcd("Artificial Intelligence",  R.drawable.computerblack));
-
-        abcd2List.add(new abcd("Computer Networks",  R.drawable.computerblack));
-
-        ListView list4 = findViewById(R.id.lvf4);
-        wordextender item4 = new wordextender(this, abcd2List);
-        list4.setAdapter(item4);
-        ListUtils.setDynamicHeight(list4);
-        list4.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                abcd word = abcd2List.get(position);
-                //Jo Karna Hai aage;
-            }
-        });
-
-        final ArrayList<abcd> abcd2List = new ArrayList<>();
-        abcd2List.add(new abcd("Information and Network Security",  R.drawable.computerblack));
-
-        abcd2List.add(new abcd("Distributed System",  R.drawable.computerblack));
-
-
-        ListView list5 = findViewById(R.id.lvf5);
-        wordextender item5 = new wordextender(this, abcd2List);
-        list5.setAdapter(item5);
-        ListUtils.setDynamicHeight(list5);
-        list5.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                abcd word = abcd2List.get(position);
-                //Jo Karna Hai aage;
-            }
-        });
-
-        final ArrayList<abcd> abcd2List = new ArrayList<>();
-
-        abcd2List.add(new abcd("Data warehouse and mining",  R.drawable.computerblack));
-
-
-        ListView list6 = findViewById(R.id.lvf6);
-        wordextender item6 = new wordextender(this, abcd2List);
-        list6.setAdapter(item6);
-        ListUtils.setDynamicHeight(list6);
-        list6.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                abcd word = abcd2List.get(position);
-                //Jo Karna Hai aage;
-            }
-        });
-
-        */
 
     }
 

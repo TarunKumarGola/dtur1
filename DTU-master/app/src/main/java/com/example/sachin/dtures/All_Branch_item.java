@@ -1,22 +1,17 @@
 package com.example.sachin.dtures;
 
 import android.app.DownloadManager;
-import android.content.ClipData;
 import android.content.Context;
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
@@ -24,12 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
-
-
-
-public class first_year_items extends AppCompatActivity {
-
-
+public class All_Branch_item extends AppCompatActivity {
 
     private String itemtype;
     private String itemsubject;
@@ -43,17 +33,17 @@ public class first_year_items extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_year_items);
+        setContentView(R.layout.activity_all__branch_item);
         Toolbar toolbar = findViewById(R.id.toolbarfirstyearitems);
         setSupportActionBar(toolbar);
 
         toolbaritem=findViewById(R.id.toolbarfirstyearitemstitle);
         itemtype=getIntent().getStringExtra("type");
         itemsubject=getIntent().getStringExtra("subject");
-        bookgroupref=FirebaseDatabase.getInstance().getReference().child("users").child("FirstYear").child("Books").child(itemsubject);
-        Notesref=FirebaseDatabase.getInstance().getReference().child("users").child("FirstYear").child("Notes").child(itemsubject);
-        PaperRef=FirebaseDatabase.getInstance().getReference().child("users").child("FirstYear").child("Paper").child(itemsubject);
-        Practicalref=FirebaseDatabase.getInstance().getReference().child("users").child("FirstYear").child("Practical").child(itemsubject);
+        bookgroupref=FirebaseDatabase.getInstance().getReference().child("users").child("AllbranchSubjects").child("Books").child(itemsubject);
+        Notesref=FirebaseDatabase.getInstance().getReference().child("users").child("AllbranchSubjects").child("Notes").child(itemsubject);
+        PaperRef=FirebaseDatabase.getInstance().getReference().child("users").child("AllbranchSubjects").child("Paper").child(itemsubject);
+        Practicalref=FirebaseDatabase.getInstance().getReference().child("users").child("AllbranchSubjects").child("Practical").child(itemsubject);
 
         toolbaritem.setText(itemsubject);
 
@@ -63,8 +53,8 @@ public class first_year_items extends AppCompatActivity {
     }
 
     public static class BookViewholder extends RecyclerView.ViewHolder{
-      View bookView;
-      LinearLayout booklist;
+        View bookView;
+        LinearLayout booklist;
         public BookViewholder(@NonNull View itemView) {
             super(itemView);
             bookView=itemView;
@@ -82,14 +72,14 @@ public class first_year_items extends AppCompatActivity {
         super.onStart();
         if (itemtype.equals("Books")) {
 
-            FirebaseRecyclerAdapter<Books, BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, BookViewholder>(
+            FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder>(
                     Books.class,
                     R.layout.booklayout,
-                    BookViewholder.class,
+                    first_year_items.BookViewholder.class,
                     bookgroupref
             ) {
                 @Override
-                protected void populateViewHolder(BookViewholder viewHolder, final Books model, int position) {
+                protected void populateViewHolder(first_year_items.BookViewholder viewHolder, final Books model, int position) {
                     viewHolder.setBook(model.getBooktitle(), model.getBookdownloadlink());
                     viewHolder.booklist.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -105,14 +95,14 @@ public class first_year_items extends AppCompatActivity {
         }
         else if (itemtype.equals("Notes")){
 
-            FirebaseRecyclerAdapter<Books, BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, BookViewholder>(
+            FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder>(
                     Books.class,
                     R.layout.booklayout,
-                    BookViewholder.class,
+                    first_year_items.BookViewholder.class,
                     Notesref
             ) {
                 @Override
-                protected void populateViewHolder(BookViewholder viewHolder, final Books model, int position) {
+                protected void populateViewHolder(first_year_items.BookViewholder viewHolder, final Books model, int position) {
                     viewHolder.setBook(model.getBooktitle(), model.getBookdownloadlink());
                     viewHolder.booklist.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -128,14 +118,14 @@ public class first_year_items extends AppCompatActivity {
 
         }
         else if (itemtype.equals("Practicals")){
-            FirebaseRecyclerAdapter<Books, BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, BookViewholder>(
+            FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder>(
                     Books.class,
                     R.layout.booklayout,
-                    BookViewholder.class,
+                    first_year_items.BookViewholder.class,
                     Practicalref
             ) {
                 @Override
-                protected void populateViewHolder(BookViewholder viewHolder, final Books model, int position) {
+                protected void populateViewHolder(first_year_items.BookViewholder viewHolder, final Books model, int position) {
                     viewHolder.setBook(model.getBooktitle(), model.getBookdownloadlink());
                     viewHolder.booklist.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -150,14 +140,14 @@ public class first_year_items extends AppCompatActivity {
             bookrecyclerViewitems.setAdapter(booksBookViewholderFirebaseRecyclerAdapter);
         }
         else if (itemtype.equals("Question Paper")){
-            FirebaseRecyclerAdapter<Books, BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, BookViewholder>(
+            FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder> booksBookViewholderFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Books, first_year_items.BookViewholder>(
                     Books.class,
                     R.layout.booklayout,
-                    BookViewholder.class,
+                    first_year_items.BookViewholder.class,
                     PaperRef
             ) {
                 @Override
-                protected void populateViewHolder(BookViewholder viewHolder, final Books model, int position) {
+                protected void populateViewHolder(first_year_items.BookViewholder viewHolder, final Books model, int position) {
                     viewHolder.setBook(model.getBooktitle(), model.getBookdownloadlink());
                     viewHolder.booklist.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -175,7 +165,7 @@ public class first_year_items extends AppCompatActivity {
 
     }
 
-    private void downloadbook(Context context,String Filename,String FileExtension,String DesignationDirectory,String url) {
+    private void downloadbook(Context context, String Filename, String FileExtension, String DesignationDirectory, String url) {
         DownloadManager downloadManager=(DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
         Uri uri=Uri.parse(url);
         DownloadManager.Request request=new DownloadManager.Request(uri);
@@ -185,7 +175,4 @@ public class first_year_items extends AppCompatActivity {
     }
 
 
-
 }
-
-

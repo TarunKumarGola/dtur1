@@ -13,28 +13,32 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TarunKr"
+        <activity
+            android:name=".TarunKr"
             android:parentActivityName=".Developers"
             android:theme="@style/AppTheme.Transparent2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Developers" />
         </activity>
-        <activity android:name=".AkshatJindal"
+        <activity
+            android:name=".AkshatJindal"
             android:parentActivityName=".Developers"
             android:theme="@style/AppTheme.Transparent2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Developers" />
         </activity>
-        <activity android:name=".ArnavGohil"
+        <activity
+            android:name=".ArnavGohil"
             android:parentActivityName=".Developers"
             android:theme="@style/AppTheme.Transparent2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Developers" />
         </activity>
-        <activity android:name=".AarnavJindal"
+        <activity
+            android:name=".AarnavJindal"
             android:parentActivityName=".Developers"
             android:theme="@style/AppTheme.Transparent2">
             <meta-data
@@ -198,6 +202,13 @@
         <activity android:name=".MC">
             <intent-filter>
                 <action android:name="com.example.sachin.dtures.MC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".All_Branch_item">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.All_Branch_item" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

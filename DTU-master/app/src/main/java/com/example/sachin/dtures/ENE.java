@@ -76,7 +76,7 @@ public class ENE extends AppCompatActivity {
          abcd2List.add(new abcd2("SEM 7",  R.drawable.white));
          abcd2List.add(new abcd2("Data warehouse and mining",  R.drawable.computerblack));
 
-         mAdapter=new com.example.sachin.dtures.ListAdapter(this,abcd2List);
+         mAdapter=new com.example.sachin.dtures.ListAdapter(this,abcd2List,type);
          recyclerView.setAdapter(mAdapter);
 
 
