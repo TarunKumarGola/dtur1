@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sachin.dtures">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/launcher1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TarunKr"
+            android:parentActivityName=".Developers"
+            android:theme="@style/AppTheme.Transparent2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Developers" />
+        </activity>
+
+        <activity android:name=".All_Branch_item"
+            android:label="">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.All_Branch_item" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".AkshatJindal"
+            android:parentActivityName=".Developers"
+            android:theme="@style/AppTheme.Transparent2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Developers" />
+        </activity>
+        <activity android:name=".ArnavGohil"
+            android:parentActivityName=".Developers"
+            android:theme="@style/AppTheme.Transparent2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Developers" />
+        </activity>
+        <activity android:name=".AarnavJindal"
+            android:parentActivityName=".Developers"
+            android:theme="@style/AppTheme.Transparent2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Developers" />
+        </activity>
+        <activity
+            android:name=".Developers"
+            android:label="Developers"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCcdu1okIOfDEUrGINkMn-qX_yyx2EQdyI" />
+
+        <activity
+            android:name=".splashScreen"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="DTU Resources">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.Home" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".First_Year_Subj">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.First_Year_Subj" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".first_year_items"
+            android:label="">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.first_year_items" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".COE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.COE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IT">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.IT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.SE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ECE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.ECE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.EE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ME">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.ME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PC">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.PC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PCT">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.PCT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PIE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.PIE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.CE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EP">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.EP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ENE">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.ENE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BT">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.BT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MAM">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.MAM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MC">
+            <intent-filter>
+                <action android:name="com.example.sachin.dtures.MC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
